@@ -19,8 +19,6 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-
-  // be sure to include its associated Products
 });
 
 router.get('/:id', (req, res) => {
@@ -36,7 +34,7 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'product_name', 'product_price', 'product_stock', 'category_id'],
       }
     ]
-    
+
   })
     .then(dbCategoryData => {
       if (!dbCategoryData) {
