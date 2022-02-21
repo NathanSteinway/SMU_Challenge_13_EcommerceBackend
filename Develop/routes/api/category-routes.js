@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
   Category.findAll({
 
-    attributes: ['category_name'],
+    attributes: ['id', 'category_name'],
 
     include: [
       {
