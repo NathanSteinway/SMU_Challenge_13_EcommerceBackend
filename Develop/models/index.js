@@ -6,7 +6,7 @@ const ProductTag = require('./ProductTag');
 
 // Category can have many products.
 
-Category.HasMany(Product, {
+Category.hasMany(Product, {
   foreignKey: 'category_id',
 });
 
